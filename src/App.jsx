@@ -12,7 +12,7 @@ import InfoPage from "./components/infopage";
 import SignUp from "./components/signup";
 import Login from "./components/login";
 import Dashboard from "./components/Dashboard";
-import Profile from "./components/Profile";
+import Profile from "./components/profile";
 import Transactions from "./components/Transactions";
 import AnimatedPage from "./components/AnimatedPage";
 import LogoAnimation from "./components/logoanimation";
