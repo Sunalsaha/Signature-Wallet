@@ -1,0 +1,267 @@
+.profile-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  background-color: #000;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #111;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #00ffe0;
+    border-radius: 4px;
+    &:hover {
+      background: #00c9b7;
+    }
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: #00ffe0 #111;
+}
+
+.profile-container {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem 1rem;
+  width: 90vw;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+
+  svg {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 6vw, 2.4rem);
+    font-weight: bold;
+    margin: 0;
+    word-break: break-word;
+  }
+}
+
+.profile-form {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1.5rem 1.2rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  animation: glowingShadow 6s linear infinite;
+  box-sizing: border-box;
+
+  label {
+    margin: 0.4rem 0 0.2rem;
+    font-weight: 500;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+  }
+
+  input,
+  textarea {
+    padding: clamp(0.5rem, 1vw, 0.75rem);
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #1f1f1f;
+    color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 6px #00ffe0;
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  button {
+    padding: clamp(0.55rem, 1vw, 0.75rem);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: bold;
+    background-color: #00ffe0;
+    color: #000;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+
+    &:hover {
+      background-color: #00c9b7;
+    }
+  }
+}
+
+.logout-button {
+  margin-top: 1.2rem;
+  padding: clamp(0.55rem, 1vw, 0.75rem);
+  background-color: #fc5757;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  transition: background 0.3s;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: #de1717;
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: difference;
+
+  &.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #58ed37;
+    background: transparent;
+  }
+
+  &.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #33bbe8;
+  }
+}
+
+@keyframes glowingShadow {
+  0% {
+    box-shadow: 0 0 10px #00ff99;
+  }
+  50% {
+    box-shadow: 0 0 20px #00ff9970;
+  }
+  100% {
+    box-shadow: 0 0 10px #eaf9f3a2;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .profile-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .profile-form {
+    padding: 1.3rem 1rem;
+    max-width: 350px;
+  }
+
+  .logout-button {
+    max-width: 350px;
+    font-size: 1rem;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .profile-container {
+    width: 95vw;
+  }
+
+  .profile-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .profile-form {
+    max-width: 100%;
+    padding: 1.2rem 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .logout-button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    max-width: 100%;
+  }
+}
+
+/* Extra Small Devices (like 5-inch phones) */
+@media (max-width: 360px) {
+  .profile-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .profile-form label {
+    font-size: 0.85rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .profile-form button,
+  .logout-button {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Ultra Small Devices (like older 4-4.5 inch phones) */
+@media (max-width: 320px) {
+  .profile-header h2 {
+    font-size: 1rem;
+  }
+
+  .profile-form label {
+    font-size: 0.75rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+  }
+
+  .profile-form button,
+  .logout-button {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+}
