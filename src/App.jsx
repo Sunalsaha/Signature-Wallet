@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import InfoPage from "./components/infopage";
+import InfoPage from "./components/Infopage";
 import SignUp from "./components/signup";
 import Login from "./components/login";
 import Dashboard from "./components/Dashboard";
@@ -35,7 +35,7 @@ const AnimatedRoutes = () => {
           }
         />
         <Route
-          path="/info"
+          path="/Infopage"
           element={
             <AnimatedPage>
               <InfoPage />
