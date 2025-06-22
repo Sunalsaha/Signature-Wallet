@@ -38,7 +38,7 @@ const AnimatedRoutes = () => {
           path="/infopage"
           element={
             <AnimatedPage>
-              <InfoPage />
+              <infoPage />
             </AnimatedPage>
           }
         />
