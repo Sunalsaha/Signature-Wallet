@@ -4,7 +4,8 @@ import { useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import AnimatedNumber from "./AnimatedNumber";
 import WithdrawSection from "./WithdrawSection";
-import "./dashboard.scss";
+import './Dashboard.scss';
+
 
 const Dashboard = () => {
   const [theme, setTheme] = useState("dark");
