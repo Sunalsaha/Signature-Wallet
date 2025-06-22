@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import './InfoPage.scss';
+import './infoPage.scss';
 import './Mobile.scss'; // Import mobile styles
 import StarBorder from './StarBorder';
 import {
@@ -9,7 +9,7 @@ import {
   IconBrandX // ✅ Modern Twitter (X) logo
 } from '@tabler/icons-react';
 
-const InfoPage = () => {
+const infoPage = () => {
   const cubeSectionRef = useRef(null);
 
   useEffect(() => {
@@ -161,4 +161,4 @@ const InfoPage = () => {
   );
 };
 
-export default InfoPage;
+export default infoPage;
