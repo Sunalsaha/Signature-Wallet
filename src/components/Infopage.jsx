@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import './InfoPage.scss';
+import './infoPage.scss';
+
 
 import './Mobile.scss'; // Import mobile styles
 import StarBorder from './StarBorder';
