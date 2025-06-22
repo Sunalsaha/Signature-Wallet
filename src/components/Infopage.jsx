@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import './infoPage.scss';
+import './InfoPage.scss';
 
 
 import './Mobile.scss'; // Import mobile styles
